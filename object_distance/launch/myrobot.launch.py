@@ -10,52 +10,47 @@ import xacro
 
 def generate_launch_description():
   
-    pkg_name = 'tortoisebot_description'
-    this_pkg = 'tortoisebot_gazebo'
-    file_subpath = 'urdf/tortoisebot.xacro'
+    pkg_name = 'object_distance'
+    xacro_file_name = 'myrobot.xacro'
     world_file_name='demo_world.sdf'
-    
-    world_path = os.path.join(
-    get_package_share_directory(this_pkg),
+  
+    xacro_file = os.path.join(
+    get_package_share_directory(pkg_name),
+    'urdf',
+    xacro_file_name)
+  
+    world_file = os.path.join(
+    get_package_share_directory(pkg_name),
     'worlds',
     world_file_name)
 
-
-    # Use xacro to process the file
-    xacro_file = os.path.join(get_package_share_directory(pkg_name),file_subpath)
     robot_description_raw = xacro.process_file(xacro_file).toxml()
 
-    # Configure the node
     node_robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
         output='screen',
         parameters=[{'robot_description': robot_description_raw,
-        'use_sim_time': True}] # add other parameters here if required
-    )
-
-    # Launch Gazebo
+        'use_sim_time': True}] )
  
     gazebo = ExecuteProcess(
     cmd=['ign', 'gazebo', world_path, '--verbose', '-r'],
-    output='screen'
-)
-
+    output='screen')
 
     spawn_entity = Node(
     package='ros_gz_sim',
     executable='create',
     arguments=[
-        '-name', 'tortoisebot',
+        '-name', 'myrobot',
         '-topic', 'robot_description',
         '-x', '0', '-y', '0', '-z', '0.335' 
     ],
     output='screen',)
     
     bridge_params = os.path.join(
-    get_package_share_directory('tortoisebot_gazebo'),
+    get_package_share_directory(pkg_name),
     'params',
-    'tortoisebot.yaml')
+    'myrobot.yaml')
 
     start_gazebo_ros_bridge_cmd = Node(
     package='ros_gz_bridge',
@@ -67,10 +62,9 @@ def generate_launch_description():
     ],
     output='screen',)
    
-    # Run the node
     return LaunchDescription([
+        gazebo,
         start_gazebo_ros_bridge_cmd,
         node_robot_state_publisher,
-        spawn_entity,
-        gazebo
+        spawn_entity
     ])
