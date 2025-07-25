@@ -34,7 +34,7 @@ def generate_launch_description():
         'use_sim_time': True}] )
  
     gazebo = ExecuteProcess(
-    cmd=['ign', 'gazebo', world_path, '--verbose', '-r'],
+    cmd=['ign', 'gazebo', world_file, '--verbose', '-r'],
     output='screen')
 
     spawn_entity = Node(
