@@ -44,7 +44,7 @@ source install/setup.bash
 ```bash
 ros2 launch ros2-lidar-object-detector myrobot.launch.py
 ```
-<img width="1020" height="900" alt="image" src="https://github.com/user-attachments/assets/abb58f29-9aed-4359-ab5b-ca50a1445f25" />
+<img width="1020" height="900" alt="image" src="https://github.com/user-attachments/assets/79334c0b-150d-43c4-8764-eb47e342b401" />
 
 To enable LIDAR visualization:
 - Click on the three dots on the upper right corner of your Gazebo window
@@ -60,7 +60,7 @@ source install/setup.bash
 ros2 run ros2-lidar-object-detector scan_filter
 ```
 
-3. **Control the Robot (Optional)**
+3. **Control the Robot**
 
 In a new terminal, start keyboard teleoperation to test the detection:
 ```bash
@@ -77,7 +77,8 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 - `m` - Move backward + turn left
 - `.` - Move backward + turn right
 - `,` - Move backward
-<img width="1854" height="1056" alt="Screenshot from 2025-07-26 11-52-42" src="https://github.com/user-attachments/assets/24016381-8ebd-4165-831f-8c1dffe22e9c" />
+<img width="1854" height="1056" alt="image" src="https://github.com/user-attachments/assets/f22c26f8-b646-4669-9b7a-49c361c99c2b" />
+
 
 ## Credits & References
 **Robot Model**: This project uses a URDF model adapted from the TortoiseBot example in the [OSRF ROS Book](https://github.com/osrf/rosbook/blob/master/code/tortoisebot/tortoisebot.urdf). The original model has been modified for ROS 2 Humble and Gazebo Ignition integration with LIDAR sensor capabilities.
