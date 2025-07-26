@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>object_distance</name>
+  <name>ros2-lidar-object-detector</name>
   <version>0.0.0</version>
   <description>Closest Distance for Object directly infront of the Robot using Lidar</description>
   <maintainer email="yashikasharma0301@gmail.com">Yashika Sharma</maintainer>
