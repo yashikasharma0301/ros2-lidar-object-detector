@@ -1,5 +1,5 @@
 # ROS2 LIDAR Object Detector
-This project demonstrates LIDAR-based object detection in a differential drive robot simulation using ROS 2. The package processes LaserScan data from the `/scan` topic by ignoring invalid ranges and values to extract the closest object distance directly in front of the robot and publishes the filtered distance to the `/closest_object_distance` topic for real-time monitoring and control applications.
+[This project](https://youtu.be/wR66sn73yjY) demonstrates LIDAR-based object detection in a differential drive robot simulation using ROS 2.The package processes LaserScan data from the `/scan` topic by ignoring invalid ranges and values to extract the closest object distance directly in front of the robot and publishes the filtered distance to the `/closest_object_distance` topic for real-time monitoring and control applications.
 
 ## System Requirements
 - **Ubuntu**: 22.04 LTS
