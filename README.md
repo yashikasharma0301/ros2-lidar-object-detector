@@ -1,5 +1,5 @@
-# ROS2 LIDAR Object Detector
-This project demonstrates LIDAR-based object detection in a differential drive robot simulation using ROS 2.The package processes LaserScan data from the `/scan` topic by ignoring invalid ranges and values to extract the closest object distance directly in front of the robot and publishes the filtered distance to the `/closest_object_distance` topic for real-time monitoring and control applications.
+# ROS2 LiDAR Object Detector
+This project demonstrates LiDAR based object detection in a differential drive robot simulation using ROS 2.The package processes LaserScan data from the `/scan` topic by ignoring invalid ranges and values to extract the closest object distance directly in front of the robot and publishes the filtered distance to the `/closest_object_distance` topic for real-time monitoring and control applications.
 
 Click [here](https://youtu.be/wR66sn73yjY) for the simulation video.
 
@@ -53,7 +53,7 @@ To enable LIDAR visualization:
 - Search for **Visualize Lidar** from the menu and click on it
 - Refresh the lists of topics and choose the '/scan' topic. Ensure that **Display Lidar Visualisation** is checked.
 
-2. **Start the LIDAR Object Detection Node**
+2. **Start the LiDAR Object Detection Node**
 
 In a new terminal, source the workspace and run the scan filter:
 ```bash
