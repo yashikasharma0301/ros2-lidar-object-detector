@@ -42,7 +42,7 @@ source install/setup.bash
 
 ### Running the Simulation
 
-1. **Launch Robot with LIDAR in Gazebo**
+1. **Launch Robot with LiDAR in Gazebo**
 ```bash
 ros2 launch ros2-lidar-object-detector myrobot.launch.py
 ```
