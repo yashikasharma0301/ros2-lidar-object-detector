@@ -41,6 +41,13 @@
           <stddev>0.01</stddev>
         </noise>
       </lidar>
+      <plugin name="laserscan" filename="libgazebo_ros_ray_sensor.so">
+          <ros>
+            <remapping>~/out:=scan</remapping>
+          </ros>
+          <output_type>sensor_msgs/LaserScan</output_type>
+          <frame_name>base_scan</frame_name>
+        </plugin>
     </sensor>
   </gazebo>
 
