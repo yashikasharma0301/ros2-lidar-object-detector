@@ -44,7 +44,7 @@ source install/setup.bash
 
 1. **Launch Robot with LiDAR in Gazebo**
 ```bash
-ros2 launch ros2-lidar-object-detector myrobot.launch.py
+ros2 launch ros2_lidar_object_detector myrobot.launch.py
 ```
 <img width="1020" height="900" alt="image" src="https://github.com/user-attachments/assets/79334c0b-150d-43c4-8764-eb47e342b401" />
 
@@ -59,7 +59,7 @@ In a new terminal, source the workspace and run the scan filter:
 ```bash
 cd my_ws
 source install/setup.bash
-ros2 run ros2-lidar-object-detector scan_filter
+ros2 run ros2_lidar_object_detector scan_filter
 ```
 
 3. **Control the Robot**
