@@ -26,7 +26,7 @@ sudo apt install ros-humble-robot-state-publisher \
 1. **Create Workspace and Clone Repository**
 ```bash
 mkdir -p my_ws/src && cd my_ws/src
-git clone https://github.com/yashikasharma0301/ros2-lidar-object-detector.git
+git clone https://github.com/yashikasharma0301/ros2_lidar_object_detector.git
 ```
 
 2. **Build the Workspace**
