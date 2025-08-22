@@ -10,7 +10,7 @@ import xacro
 
 def generate_launch_description():
   
-    pkg_name = 'ros2-lidar-object-detector'
+    pkg_name = 'ros2_lidar_object_detector'
     xacro_file_name = 'myrobot.xacro'
     world_file_name='demo_world.sdf'
   
