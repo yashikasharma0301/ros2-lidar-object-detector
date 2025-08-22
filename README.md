@@ -53,6 +53,8 @@ To enable LIDAR visualization:
 - Search for **Visualize Lidar** from the menu and click on it
 - Refresh the lists of topics and choose the '/scan' topic. Ensure that **Display Lidar Visualisation** is checked.
 
+NOTE: If using Gazebo Harmonic, just change the gazebo launch cmd in launch file to  "cmd=['gz', 'sim', world_path, '--verbose', '-r'],"
+
 2. **Start the LiDAR Object Detection Node**
 
 In a new terminal, source the workspace and run the scan filter:
